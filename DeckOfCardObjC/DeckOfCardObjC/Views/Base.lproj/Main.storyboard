@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JLCardViewController" customModule="DeckOfCardObjC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk9-ln-0KD">
+                                <rect key="frame" x="186" y="162" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zg7-Gt-PAa">
+                                <rect key="frame" x="40.333333333333343" y="203" width="333.33333333333326" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zg7-Gt-PAa" secondAttribute="height" multiplier="2:3" id="7IK-MK-61I"/>
+                                    <constraint firstAttribute="height" constant="500" id="x7B-my-dFr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnG-MV-gaw">
+                                <rect key="frame" x="135" y="723" width="144" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JMH-mc-mMi"/>
+                                    <constraint firstAttribute="width" secondItem="xnG-MV-gaw" secondAttribute="height" multiplier="16:5" id="yvE-4H-2sW"/>
+                                </constraints>
+                                <state key="normal" title="Draw New Card">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawNewCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nmx-IT-pqy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zg7-Gt-PAa" firstAttribute="top" secondItem="gk9-ln-0KD" secondAttribute="bottom" constant="20" id="8lz-uR-yqL"/>
+                            <constraint firstItem="zg7-Gt-PAa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="A2g-bk-n5F"/>
+                            <constraint firstItem="zg7-Gt-PAa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NzQ-z2-Mx6"/>
+                            <constraint firstItem="xnG-MV-gaw" firstAttribute="top" secondItem="zg7-Gt-PAa" secondAttribute="bottom" constant="20" id="QUj-rN-2Cf"/>
+                            <constraint firstItem="gk9-ln-0KD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gdz-ar-Cmk"/>
+                            <constraint firstItem="xnG-MV-gaw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zCl-zw-lZk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="zg7-Gt-PAa" id="BQe-eX-aM6"/>
+                        <outlet property="suitLabel" destination="gk9-ln-0KD" id="QgL-6P-jla"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
